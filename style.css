@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #ebebeb;
+    color: #333;
+    line-height: 1.65;
+}
+
+/* ── Navigation ── */
+nav {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+nav a {
+    color: #1a4fa0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 6px;
+    font-family: Arial, sans-serif;
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* ── Page Layout ── */
+.page {
+    max-width: 920px;
+    margin: 28px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 32px 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.09);
+}
+
+/* ── Profile Section ── */
+.profile {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.photo {
+    width: 220px;
+    height: 270px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 1px solid #ddd;
+}
+
+.photo-placeholder {
+    width: 220px;
+    height: 270px;
+    background: #e8e8e8;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px dashed #ccc;
+}
+
+.info h1 {
+    font-size: 1.85rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 14px;
+    line-height: 1.25;
+}
+
+.info p {
+    color: #555;
+    font-size: 0.97rem;
+    margin-bottom: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.info .email {
+    margin-top: 12px;
+    color: #444;
+}
+
+.social-links {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.social-links a {
+    color: #1a4fa0;
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-family: Arial, sans-serif;
+}
+
+.social-links a:hover { text-decoration: underline; }
+
+.sep { color: #aaa; font-size: 0.85rem; }
+
+/* ── Section Headings ── */
+h2 {
+    font-size: 1.25rem;
+    color: #111;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+    font-family: Arial, sans-serif;
+}
+
+/* ── Bio ── */
+.bio-text p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.bio-text a { color: #1a4fa0; text-decoration: none; }
+.bio-text a:hover { text-decoration: underline; }
+
+/* ── Metrics ── */
+.metrics {
+    display: flex;
+    gap: 0;
+    margin-top: 22px;
+    background: #f5f7fc;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e6f0;
+}
+
+.metric-item {
+    flex: 1;
+    text-align: center;
+    padding: 14px 10px;
+    border-right: 1px solid #e0e6f0;
+}
+
+.metric-item:last-child { border-right: none; }
+
+.metric-num {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #1a4fa0;
+    font-family: Arial, sans-serif;
+}
+
+.metric-label {
+    font-size: 0.78rem;
+    color: #777;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* ── Research Areas ── */
+.research-list {
+    list-style: none;
+    padding: 0;
+}
+
+.research-list li {
+    margin-bottom: 12px;
+    padding-left: 18px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.research-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #1a4fa0;
+    font-size: 0.8rem;
+    top: 3px;
+}
+
+/* ── Publications ── */
+.pub-year-heading {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #1a4fa0;
+    margin: 24px 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e5e9f5;
+    font-family: Arial, sans-serif;
+}
+
+.pub-year-heading:first-child { margin-top: 0; }
+
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-item {
+    margin-bottom: 12px;
+    padding: 11px 14px 11px 16px;
+    background: #fafbfe;
+    border-left: 3px solid #1a4fa0;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.55;
+}
+
+.pub-item a {
+    color: #1a4fa0;
+    text-decoration: none;
+}
+
+.pub-item a:hover { text-decoration: underline; }
+
+.badge {
+    display: inline-block;
+    background: #e6edfa;
+    color: #1a4fa0;
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 6px;
+    white-space: nowrap;
+    font-family: Arial, sans-serif;
+    vertical-align: middle;
+}
+
+.badge.q1 { background: #e6edfa; color: #1a4fa0; }
+.badge.q2 { background: #e8f5e9; color: #2e7d32; }
+.badge.q3 { background: #fff3e0; color: #e65100; }
+
+.under-review {
+    font-style: italic;
+    color: #777;
+    font-size: 0.88rem;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #fffdf0;
+    border-left: 3px solid #f5c518;
+    border-radius: 0 5px 5px 0;
+}
+
+/* ── Education ── */
+.edu-item {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.edu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.edu-degree {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.edu-school {
+    color: #1a4fa0;
+    font-size: 0.95rem;
+    margin: 5px 0;
+    font-family: Arial, sans-serif;
+}
+
+.edu-thesis {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* ── Contact ── */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 40px;
+}
+
+.contact-item {
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    color: #444;
+}
+
+.contact-item strong {
+    color: #111;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #888;
+}
+
+.contact-item a { color: #1a4fa0; text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
+
+/* ── Footer ── */
+footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.82rem;
+    padding: 20px;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .card { padding: 22px 18px; }
+
+    .profile { flex-direction: column; align-items: center; }
+
+    .photo { width: 160px; height: 200px; }
+
+    .metrics { flex-wrap: wrap; }
+    .metric-item { min-width: 45%; }
+
+    .contact-grid { grid-template-columns: 1fr; }
+}
